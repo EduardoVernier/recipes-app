@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:card_view="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:elevation="3dp"
+        card_view:cardCornerRadius="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/recipe_thumbnail"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:padding="10dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="fitCenter"
+                tools:src="@mipmap/ic_launcher"/>
+
+            <TextView
+                android:id="@+id/recipe_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/recipe_thumbnail"
+                tools:text="Nome da receita"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/prep_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/recipe_thumbnail"
+                android:layout_below="@id/recipe_title"
+                tools:text="20 minutos - 10 porções"/>
+
+            <TextView
+                android:id="@+id/available_ingredients"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/recipe_thumbnail"
+                android:layout_below="@id/prep_info"
+                tools:text="Usa macarrão, cebola, carne"
+                android:textColor="#2b892b"/>
+
+            <TextView
+                android:id="@+id/unavailable_ingredients"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/recipe_thumbnail"
+                android:layout_below="@id/available_ingredients"
+                tools:text="Falta queijo ralado, alho, +2"
+                android:textColor="#ed2424"/>
+
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
