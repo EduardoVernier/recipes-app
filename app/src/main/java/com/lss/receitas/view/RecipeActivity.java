@@ -14,6 +14,5 @@ public class RecipeActivity extends AppCompatActivity {
 		getSupportFragmentManager().beginTransaction()
 				.add(R.id.activity_recipe, new RecipeListFragment())
 				.commitAllowingStateLoss();
-
 	}
 }

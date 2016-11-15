@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.lss.receitas.model.Recipe;
+import com.lss.receitas.model.network.response.Recipe;
 
 import java.util.List;
 
@@ -36,7 +36,7 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder
 	@Override
 	public void onBindViewHolder(final ViewHolder holder, int position) {
 		holder.item = recipeList.get(position);
-		holder.recipeTitle.setText(holder.item.getTitle());
+		holder.recipeTitle.setText(holder.item.getName());
 		holder.prepInfo.setText(holder.item.getPrepTime() + " - "
 				+ holder.item.getServings() + " porções");
 

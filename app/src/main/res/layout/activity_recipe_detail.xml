@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_recipe_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.lss.receitas.RecipeDetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"
+            android:id="@+id/detail_main_image" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/detail_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Test name"
+                android:textSize="24sp"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:id="@+id/detail_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Test name"/>
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Ingredientes"
+                android:textColor="#555555"
+                android:textSize="17sp"/>
+
+            <TextView
+                android:id="@+id/detail_ingredients"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="texttexttexttext"/>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Modo de preparo"
+                android:textColor="#555555"
+                android:textSize="17sp"/>
+
+            <TextView
+                android:id="@+id/detail_steps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="texttexttexttext"/>
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</ScrollView>

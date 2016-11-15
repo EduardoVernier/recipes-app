@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_margin="5dp"
+        android:layout_margin="2dp"
         android:elevation="3dp"
         card_view:cardCornerRadius="0dp">
 
@@ -25,7 +25,7 @@
                 android:layout_height="80dp"
                 android:padding="10dp"
                 android:background="?attr/selectableItemBackgroundBorderless"
-                android:scaleType="fitCenter"
+                android:scaleType="centerCrop"
                 tools:src="@mipmap/ic_launcher"/>
 
             <TextView
@@ -61,7 +61,6 @@
                 android:layout_below="@id/available_ingredients"
                 tools:text="Falta queijo ralado, alho, +2"
                 android:textColor="#ed2424"/>
-
 
         </RelativeLayout>
 

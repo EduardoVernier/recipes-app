@@ -1,5 +1,6 @@
 package com.lss.receitas.view;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -10,19 +11,18 @@ import android.view.ViewGroup;
 
 import com.lss.receitas.R;
 import com.lss.receitas.RecipeAdapter;
-import com.lss.receitas.model.Recipe;
-import com.lss.receitas.model.RecipeService;
+import com.lss.receitas.RecipeDetailActivity;
+import com.lss.receitas.model.network.RetrofitManager;
+import com.lss.receitas.model.network.response.Recipe;
 
 import java.util.ArrayList;
-import java.util.Observable;
-import java.util.Observer;
+import java.util.List;
 
 public class RecipeListFragment extends Fragment
 		implements RecipeAdapter.OnListFragmentInteractionListener{
 
 	private RecipeAdapter recipeAdapter;
-	private ArrayList<Recipe> recipeList;
-	private RecipeService recipeService;
+	private List<Recipe> recipeList;
 
 	public RecipeListFragment() {
 	}
@@ -34,15 +34,14 @@ public class RecipeListFragment extends Fragment
 		recipeList = new ArrayList<Recipe>();
 		recipeAdapter = new RecipeAdapter(recipeList, this, this.getContext());
 
-		recipeService = RecipeService.getInstance();
-		recipeService.init(recipeList, getContext());
-		recipeService.addObserver(new Observer() {
-			@Override
-			public void update(Observable o, Object arg) {
-				RecipeListFragment.this.recipeAdapter.notifyDataSetChanged();
-			}
-		});
-		recipeService.fetchRecipes();
+		RetrofitManager.requestRecipeList(this);
+	}
+
+	public void updateRecipeList(List<Recipe> recipeList) {
+
+		this.recipeList.clear();
+		this.recipeList.addAll(recipeList);
+		recipeAdapter.notifyDataSetChanged();
 	}
 
 	@Override
@@ -61,5 +60,10 @@ public class RecipeListFragment extends Fragment
 	@Override
 	public void onListFragmentInteraction(Recipe recipe) {
 
+		String endpoint = recipe.detailUrl.substring(recipe.detailUrl.lastIndexOf('/')+1);
+
+		Intent intent = new Intent(RecipeListFragment.this.getContext(), RecipeDetailActivity.class);
+		intent.putExtra("endpoint", endpoint);
+		startActivity(intent);
 	}
 }
