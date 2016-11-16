@@ -17,8 +17,10 @@ public class RecipeDetailActivity extends AppCompatActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_recipe_detail);
 
-		String endpoint = getIntent().getExtras().getString("endpoint");
-		RetrofitManager.requestRecipeDetail(this, endpoint);
+//		String endpoint = getIntent().getExtras().getString("endpoint");
+//		RetrofitManager.requestRecipeDetail(this, endpoint);
+		int id = getIntent().getExtras().getInt("id");
+		RetrofitManager.requestRecipeDetail(this, id);
 	}
 
 	public void updateUI(RecipeDetail recipe) {

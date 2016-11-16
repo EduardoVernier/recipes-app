@@ -6,6 +6,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Recipe {
+	@SerializedName("id")
+	public  int id;
 	@SerializedName("title")
 	public String name;
 	@SerializedName("prepTime")
@@ -18,6 +20,8 @@ public class Recipe {
 	public String urlImage;
 	@SerializedName("detalhe")
 	public String detailUrl;
+
+	public int getId() { return id; }
 
 	public String getName() {
 		return name;

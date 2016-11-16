@@ -6,17 +6,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class RecipeDetail {
-	@SerializedName("nome")
+	@SerializedName("title")
 	public String name;
-	@SerializedName("tempoPreparo")
+	@SerializedName("prepTime")
 	public String prepTime;
-	@SerializedName("rendimento")
+	@SerializedName("servings")
 	public String servings;
-	@SerializedName("igredientes")
+	@SerializedName("ingredients")
 	public List<String> ingredientList = new ArrayList<String>();
-	@SerializedName("urlImagem")
+	@SerializedName("urlImage")
 	public String urlImage;
-	@SerializedName("modoPreparo")
+	@SerializedName("directions")
 	public List<String> preparationSteps = new ArrayList<String>();
 
 	public String getName() {

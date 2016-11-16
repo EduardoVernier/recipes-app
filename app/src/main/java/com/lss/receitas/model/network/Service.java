@@ -16,9 +16,11 @@ public interface Service {
 	Call<RecipeListResponse> getRecipeList_Old();
 
 	@GET("{detail}")
-	Call<RecipeDetail> getRecipeDetail(@Path("detail") String detail);
+	Call<RecipeDetail> getRecipeDetail_Old(@Path("detail") String detail);
 
 	@POST("recipe/search")
 	Call<RecipeListResponse> getRecipeList(@Body IngredientListRequest lstIngred);
 
+	@GET("recipe/search/{id}")
+	Call<RecipeDetail> getRecipeDetail(@Path("id") int id);
 }

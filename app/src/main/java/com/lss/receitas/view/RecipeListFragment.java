@@ -59,11 +59,12 @@ public class RecipeListFragment extends Fragment
 
 	@Override
 	public void onListFragmentInteraction(Recipe recipe) {
-
-		String endpoint = recipe.detailUrl.substring(recipe.detailUrl.lastIndexOf('/')+1);
-
+		int id = recipe.getId();
+//		String endpoint = recipe.detailUrl.substring(recipe.detailUrl.lastIndexOf('/')+1);
+//
 		Intent intent = new Intent(RecipeListFragment.this.getContext(), RecipeDetailActivity.class);
-		intent.putExtra("endpoint", endpoint);
+//		intent.putExtra("endpoint", endpoint);
+		intent.putExtra("id", id);
 		startActivity(intent);
 	}
 }

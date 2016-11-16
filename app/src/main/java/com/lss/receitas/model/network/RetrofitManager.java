@@ -57,9 +57,11 @@ public final class RetrofitManager {
 		});
 	}
 
-	public static void requestRecipeDetail(final RecipeDetailActivity recipeDetailActivity, String detailUrl) {
+//	public static void requestRecipeDetail(final RecipeDetailActivity recipeDetailActivity, String detailUrl) {
+	public static void requestRecipeDetail(final RecipeDetailActivity recipeDetailActivity, int id) {
 
-		Call<RecipeDetail> call = service.getRecipeDetail(detailUrl);
+//		Call<RecipeDetail> call = service.getRecipeDetail_Old(detailUrl);
+		Call<RecipeDetail> call = service.getRecipeDetail(id);
 		call.enqueue(new Callback<RecipeDetail>() {
 			@Override
 			public void onResponse(Call<RecipeDetail> call, Response<RecipeDetail> response) {
