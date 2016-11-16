@@ -6,15 +6,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Recipe {
-	@SerializedName("nome")
+	@SerializedName("title")
 	public String name;
-	@SerializedName("tempoPreparo")
+	@SerializedName("prepTime")
 	public String prepTime;
-	@SerializedName("rendimento")
+	@SerializedName("servings")
 	public String servings;
-	@SerializedName("ingredientes")
+	@SerializedName("ingredients")
 	public List<String> ingredientList = new ArrayList<String>();
-	@SerializedName("urlImagem")
+	@SerializedName("urlImage")
 	public String urlImage;
 	@SerializedName("detalhe")
 	public String detailUrl;

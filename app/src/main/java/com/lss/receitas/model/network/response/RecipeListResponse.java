@@ -6,6 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class RecipeListResponse {
-	@SerializedName("receitas")
+	@SerializedName("recipes")
 	public List<Recipe> recipeList = new ArrayList<Recipe>();
 }

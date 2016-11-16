@@ -3,9 +3,13 @@ package com.lss.receitas.model.network;
 import android.content.Context;
 
 import com.lss.receitas.RecipeDetailActivity;
+import com.lss.receitas.model.network.response.IngredientListRequest;
 import com.lss.receitas.model.network.response.RecipeDetail;
 import com.lss.receitas.model.network.response.RecipeListResponse;
 import com.lss.receitas.view.RecipeListFragment;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -25,7 +29,8 @@ public final class RetrofitManager {
 	public static void init(Context context) {
 
 		retrofit = new Retrofit.Builder()
-				.baseUrl("http://www.mocky.io/v2/")
+//				.baseUrl("http://www.mocky.io/v2/")
+				.baseUrl("http://192.168.1.2:8080/recipes-web-service/")
 				.addConverterFactory(GsonConverterFactory.create())
 				.build();
 
@@ -33,8 +38,12 @@ public final class RetrofitManager {
 	}
 
 	public static void requestRecipeList(final RecipeListFragment recipeListFragment) {
+		List<String> lstIngr = new ArrayList<String>();
+		lstIngr.add("linguiça");
+		lstIngr.add("maçã");
 
-		Call<RecipeListResponse> call = service.getRecipeList();
+//		Call<RecipeListResponse> call = service.getRecipeList_Old();
+		Call<RecipeListResponse> call = service.getRecipeList(new IngredientListRequest(lstIngr));
 		call.enqueue(new Callback<RecipeListResponse>() {
 			@Override
 			public void onResponse(Call<RecipeListResponse> call, Response<RecipeListResponse> response) {
