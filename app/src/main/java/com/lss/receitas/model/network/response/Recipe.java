@@ -8,7 +8,7 @@ import java.util.List;
 public class Recipe {
 	@SerializedName("id")
 	public  int id;
-	@SerializedName("title")
+	@SerializedName("name")
 	public String name;
 	@SerializedName("prepTime")
 	public String prepTime;

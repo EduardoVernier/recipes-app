@@ -1,6 +1,6 @@
 package com.lss.receitas.model.network;
 
-import com.lss.receitas.model.network.response.IngredientListRequest;
+import com.lss.receitas.model.network.request.IngredientListRequest;
 import com.lss.receitas.model.network.response.RecipeDetail;
 import com.lss.receitas.model.network.response.RecipeListResponse;
 

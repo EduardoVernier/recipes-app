@@ -3,7 +3,7 @@ package com.lss.receitas.model.network;
 import android.content.Context;
 
 import com.lss.receitas.RecipeDetailActivity;
-import com.lss.receitas.model.network.response.IngredientListRequest;
+import com.lss.receitas.model.network.request.IngredientListRequest;
 import com.lss.receitas.model.network.response.RecipeDetail;
 import com.lss.receitas.model.network.response.RecipeListResponse;
 import com.lss.receitas.view.RecipeListFragment;
@@ -30,7 +30,7 @@ public final class RetrofitManager {
 
 		retrofit = new Retrofit.Builder()
 //				.baseUrl("http://www.mocky.io/v2/")
-				.baseUrl("http://192.168.1.2:8080/recipes-web-service/")
+				.baseUrl("http://192.168.1.4:8080/recipes-web-service/")
 				.addConverterFactory(GsonConverterFactory.create())
 				.build();
 

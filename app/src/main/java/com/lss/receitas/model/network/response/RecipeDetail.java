@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class RecipeDetail {
-	@SerializedName("title")
+	@SerializedName("name")
 	public String name;
 	@SerializedName("prepTime")
 	public String prepTime;
@@ -16,7 +16,7 @@ public class RecipeDetail {
 	public List<String> ingredientList = new ArrayList<String>();
 	@SerializedName("urlImage")
 	public String urlImage;
-	@SerializedName("directions")
+	@SerializedName("preparationSteps")
 	public List<String> preparationSteps = new ArrayList<String>();
 
 	public String getName() {

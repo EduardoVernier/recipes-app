@@ -1,4 +1,4 @@
-package com.lss.receitas.model.network.response;
+package com.lss.receitas.model.network.request;
 
 import java.util.List;
 
