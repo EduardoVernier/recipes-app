@@ -1,0 +1,24 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             tools:context="com.lss.receitas.view.IngredientFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Adicionar ingrediente"
+        android:layout_weight="1"
+        android:id="@+id/ingredient_edit_text" />
+
+    <ImageButton
+        android:src="@drawable/ic_clear_black_24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:id="@+id/remove_button"
+        android:background="@null"
+        android:baselineAlignBottom="true"
+        android:visibility="visible" />
+</LinearLayout>

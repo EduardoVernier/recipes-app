@@ -2,7 +2,7 @@ package com.lss.receitas.model.network;
 
 import android.content.Context;
 
-import com.lss.receitas.RecipeDetailActivity;
+import com.lss.receitas.view.RecipeDetailActivity;
 import com.lss.receitas.model.network.request.IngredientListRequest;
 import com.lss.receitas.model.network.response.RecipeDetail;
 import com.lss.receitas.model.network.response.RecipeListResponse;

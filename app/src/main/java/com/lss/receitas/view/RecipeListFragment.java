@@ -10,8 +10,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.lss.receitas.R;
-import com.lss.receitas.RecipeAdapter;
-import com.lss.receitas.RecipeDetailActivity;
 import com.lss.receitas.model.network.RetrofitManager;
 import com.lss.receitas.model.network.response.Recipe;
 

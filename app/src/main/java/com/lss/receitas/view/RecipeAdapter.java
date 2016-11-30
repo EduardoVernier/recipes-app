@@ -1,4 +1,4 @@
-package com.lss.receitas;
+package com.lss.receitas.view;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.lss.receitas.R;
 import com.lss.receitas.model.network.response.Recipe;
 
 import java.util.List;

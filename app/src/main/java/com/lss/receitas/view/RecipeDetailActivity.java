@@ -1,4 +1,4 @@
-package com.lss.receitas;
+package com.lss.receitas.view;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -7,6 +7,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.lss.receitas.R;
 import com.lss.receitas.model.network.RetrofitManager;
 import com.lss.receitas.model.network.response.RecipeDetail;
 
