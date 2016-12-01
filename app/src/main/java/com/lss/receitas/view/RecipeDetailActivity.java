@@ -11,6 +11,10 @@ import com.lss.receitas.R;
 import com.lss.receitas.model.network.RetrofitManager;
 import com.lss.receitas.model.network.response.RecipeDetail;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 public class RecipeDetailActivity extends AppCompatActivity {
 
 	@Override
@@ -21,7 +25,7 @@ public class RecipeDetailActivity extends AppCompatActivity {
 //		String endpoint = getIntent().getExtras().getString("endpoint");
 //		RetrofitManager.requestRecipeDetail(this, endpoint);
 		int id = getIntent().getExtras().getInt("id");
-		RetrofitManager.requestRecipeDetail(this, id);
+		RetrofitManager.requestRecipeDetail(id, recipeDetailCallback);
 	}
 
 	public void updateUI(RecipeDetail recipe) {
@@ -44,4 +48,16 @@ public class RecipeDetailActivity extends AppCompatActivity {
 		steps.setText(recipe.getPreparationStepsString());
 
 	}
+
+	Callback<RecipeDetail> recipeDetailCallback = new Callback<RecipeDetail>() {
+		@Override
+		public void onResponse(Call<RecipeDetail> call, Response<RecipeDetail> response) {
+			updateUI(response.body());
+		}
+
+		@Override
+		public void onFailure(Call<RecipeDetail> call, Throwable t) {
+
+		}
+	};
 }

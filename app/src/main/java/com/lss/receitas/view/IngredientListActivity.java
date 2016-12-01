@@ -1,6 +1,8 @@
 package com.lss.receitas.view;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -10,6 +12,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 
 import com.lss.receitas.R;
+import com.lss.receitas.model.network.request.IngredientListRequest;
 
 public class IngredientListActivity extends AppCompatActivity {
 
@@ -46,6 +49,17 @@ public class IngredientListActivity extends AppCompatActivity {
 			@Override
 			public void onClick(View v) {
 				addIngredient();
+			}
+		});
+
+		FloatingActionButton done = (FloatingActionButton) findViewById(R.id.done);
+		done.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				IngredientListRequest ingredientList = new IngredientListRequest(adapter.getIngredientList());
+				Intent intent = new Intent(IngredientListActivity.this, RecipeActivity.class);
+				intent.putExtra("ingredientList", ingredientList); // using the (String name, Parcelable value) overload!
+				startActivity(intent);
 			}
 		});
 	}

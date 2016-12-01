@@ -51,6 +51,10 @@ public class IngredientsAdapter extends RecyclerView.Adapter<IngredientsAdapter.
 		return ingredientList.size();
 	}
 
+	public List<String> getIngredientList() {
+		return ingredientList;
+	}
+
 	public void addIngredient(String ingredient) {
 
 		ingredientList.add(0,ingredient);
