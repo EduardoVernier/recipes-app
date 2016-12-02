@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Receitas</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="WSUrl">http://192.168.1.4:8080/recipes-web-service/</string>
+
 </resources>
